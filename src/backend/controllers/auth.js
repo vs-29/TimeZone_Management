@@ -20,7 +20,7 @@ export const register=async(req,res,next)=>{
             
            fullname: normalizedFullName ,
            password: hash,
-           isAdmin:req.body.isAdmin|| false,
+           isAdmin: false,
         })
         await newUser.save();
         res.status(201).json(newUser);
